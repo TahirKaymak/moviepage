@@ -1,16 +1,291 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@font-face {
+  font-family: Gilroy-Medium;
+  src: url(https://unpkg.com/aks-fonts@1.0.0/Gilroy/Gilroy-Medium.ttf);
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+@font-face {
+  font-family: Gilroy-Regular;
+  src: url(https://unpkg.com/aks-fonts@1.0.0/Gilroy/Gilroy-Regular.ttf);
+}
+
+@font-face {
+  font-family: Gilroy-Bold;
+  src: url(https://unpkg.com/aks-fonts@1.0.0/Gilroy/Gilroy-Bold.ttf);
+}
+
+@font-face {
+  font-family: Gilroy-Light;
+  src: url(https://unpkg.com/aks-fonts@1.0.0/Gilroy/Gilroy-Light.ttf);
 }
 
 * {
   box-sizing: border-box;
+}
+
+body {
+  background: rgb(9, 7, 50);
+  background: linear-gradient(90deg, rgba(9, 7, 50, 1) 0%, rgb(19, 37, 85) 50%, rgba(9, 7, 50, 1) 100%);
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+}
+
+.wrapper {
+
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.header {
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  background: center center / cover rgba(244, 247, 254, 0.2);
+  filter: none;
+  backdrop-filter: blur(20px);
+}
+
+
+.header .row {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-right: 3%;
+  padding-left: 3%;
+}
+
+.header .row .wrap {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  position: relative;
+}
+
+.header .row .wrap .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-family: Gilroy-Bold;
+  text-decoration: none;
+  margin-right: 50px;
+}
+
+.logo .logo-first {
+  transition: all 0.3s ease;
+  color: #e3e9f0;
+}
+
+.logo .logo-last {
+  transition: all 0.5s ease;
+  color: rgb(177, 36, 36);
+}
+
+.header .row .wrap .menu-list {
+  display: flex;
+  align-items: center;
+  line-height: normal;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.header .row .wrap .menu-list .menu-item {
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+  font-weight: 500;
+  font-family: Gilroy-Bold;
+}
+
+.header .row .wrap .menu-list .menu-item .link {
+  color: #e3e9f0;
+  text-decoration: none;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.container {
+  display: flex;
+  max-width: 1250px;
+  height: auto;
+  gap: 25px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.container .card {
+  position: relative;
+  font-size: 14px;
+  line-height: 21px;
+  width: 22%;
+  height: 400px;
+  overflow: hidden;
+  transition: 0.5s ease all;
+  background: #e3e9f0;
+  border-radius: 12px;
+
+}
+
+.container .card .card-link {
+
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: auto;
+
+}
+
+.container .card .card-link h5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: gray;
+  margin: 0;
+  text-decoration: none;
+}
+
+.container .card:hover {
+  transform: translateY(-10px);
+}
+
+.container .card .card-title {
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+}
+
+.box {
+  width: 100%;
+  height: 50px;
+}
+
+.main {
+  width: 100%;
+  height: auto;
+  margin-top: 50px;
+  font-family: Gilroy-Bold;
+  color: rgb(255, 255, 255);
+}
+
+.main .bg-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: url(https://www.wallpaperflare.com/static/854/718/575/star-wars-storm-troopers-rogue-one-a-star-wars-story-digital-art-wallpaper.jpg);
+}
+
+.main .bg-section::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, #000000, transparent);
+  backdrop-filter: blur(3px);
+}
+
+.main .bg-section .row {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 40px;
+  gap: 40px;
+}
+
+.main .bg-section .row .card {
+  width: 20%;
+  height: 100%;
+  position: relative;
+  font-size: 14px;
+  line-height: 21px;
+  overflow: hidden;
+  transition: 0.5s ease all;
+}
+
+.main .bg-section .row .card:hover {
+  transform: translateY(-10px);
+}
+
+.main .bg-section .row .card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.main .bg-section .row .content {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.main .bg-section .row .content .title {
+  display: flex;
+  width: 100%;
+}
+
+.main .bg-section .row .content .title h1 {
+  margin-right: 10px;
+}
+
+.main .bg-section .row .content .facts {
+  display: flex;
+  width: 100%;
+  margin: 0;
+}
+
+.main .bg-section .row .content .facts h4 {
+  margin-right: 10px;
+}
+
+.slider-card {
+  position: relative;
+  font-size: 14px;
+  line-height: 21px;
+  width: 250px;
+  height: 400px;
+  overflow: hidden;
+  transition: 0.5s ease all;
+  background: #e3e9f0;
+  border-radius: 12px;
+  border:0 ;
 }
