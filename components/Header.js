@@ -1,10 +1,8 @@
 import Link from 'next/link'
-import {animateScroll as scroll} from 'react-scroll';
-
 
 export default function Header() {
     return (
-        <div className="header" onClick={() => scroll.scrollToTop()}>
+        <div className="header">
             <div className="row">
                 <div className="wrap">
                     <a href="" className="logo">
@@ -28,8 +26,8 @@ export default function Header() {
                             </Link>
                         </li>
                         <li className="menu-item">
-                            <Link href="/About">
-                                <a className="link" >ABOUT</a>
+                            <Link href="/login">
+                                <a className="link" >LOGIN</a>
                             </Link>
                         </li>
                     </ul>

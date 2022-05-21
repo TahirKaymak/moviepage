@@ -37,18 +37,6 @@ const Post = ({ movie }) => {
                     </div>
                 </div>
             </div>
-            <Slider {...settings}>
-                   <div className='slider-card'></div>
-                   <div className='slider-card'></div>
-                   <div className='slider-card'></div>
-                   <div className='slider-card'></div>
-                   <div className='slider-card'></div>
-                   <div className='slider-card'></div>
-                   <div className='slider-card'></div>
-                   <div className='slider-card'></div>
-                   <div className='slider-card'></div>
-                   <div className='slider-card'></div>
-            </Slider>
         </div>
     </div>
 }

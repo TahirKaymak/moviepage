@@ -1,12 +1,11 @@
 import Link from "next/link";
 import Header from "../../components/Header";
-import {animateScroll as scroll} from 'react-scroll';
 
 export default function home({ movies }) {
     return (
         <div>
             <div className="wrapper">
-                <Header onClick={() => scroll.scrollToTop()} />
+                <Header />
                 <div className="container">
                     {movies.Search.length > 0 ? movies.Search.map((item, i) => <div key={i} className="card">
                         <Link href={'/movie/' + item.imdbID}>
