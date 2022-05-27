@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function Header() {
     return (
-        <div className="header">
+        <div className="header" >
             <div className="row">
                 <div className="wrap">
                     <a href="" className="logo">

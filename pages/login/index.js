@@ -72,6 +72,9 @@ const App = () => {
         </div>
       </div>
       <div className='auth-side'>
+      <div className='auth-side-border'>
+      <div className='auth-side-image'><img alt="" src='images.jpg' /></div>
+      </div>
       </div>
     </div>
   );
